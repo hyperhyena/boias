@@ -1,0 +1,51 @@
+import folium
+from folium.plugins import MiniMap, FloatImage, MeasureControl, MousePosition, TagFilterButton
+
+
+url = (
+    "https://raw.githubusercontent.com/ocefpaf/secoora_assets_map/"
+    "a250729bbcf2ddd12f46912d36c33f7539131bec/secoora_icons/rose.png"
+)
+formatter = "function(num) {return L.Util.formatNum(num, 3) + ' &deg; ';};"
+
+# Coordenadas aproximadas do centro de Florianópolis
+florianopolis_coords = [-27.5973002, -48.5496098]
+
+# Criar um mapa centrado em Florianópolis
+mapa = folium.Map(location=florianopolis_coords, zoom_start=12, tiles="Esri_WorldImagery")
+
+#Criar grupos de pontos para as boias
+grupoVermelho = folium.FeatureGroup("Boia Vermelha").add_to(mapa)
+folium.Marker([-27.505332, -48.344493], tooltip="Boia", icon=folium.Icon(color="red")).add_to(mapa)
+
+grupoVerde = folium.FeatureGroup("Boia Verde").add_to(mapa)
+folium.Marker([-27.615129, -48.3964593], tooltip="Boia", icon=folium.Icon(color="green")).add_to(mapa)
+
+#Coordenadas da trilha
+trail_coordinates = [(-27.505332, -48.344493),(-27.512245, -48.326016), (-27.521975, -48.342472), (-27.525047, -48.329480)]
+folium.PolyLine(trail_coordinates, tooltip='Caminho da Boia Vermelha', dash_array="5,10", color="red").add_to(mapa)
+
+trail_coordinates = [(-27.615129, -48.3964593),(-27.626640, -48.418400), (-27.635592, -48.378848), (-27.653399, -48.399833)]
+folium.PolyLine(trail_coordinates, tooltip='Caminho da Boia Verde', dash_array="5,10", color="green").add_to(mapa)
+
+#Adicionar minimapa
+MiniMap(toggle_display=True).add_to(mapa)
+
+#Adicionar rosa dos ventos
+FloatImage(url, top=4, left=3).add_to(mapa)
+
+#Boat Marker
+folium.plugins.BoatMarker(
+    location=(-27.525047, -48.329480), heading=-20, wind_heading=46, wind_speed=25, color="#f2f2f2").add_to(mapa)
+
+#Local usuário
+folium.plugins.LocateControl(auto_start=True, showCompass=True).add_to(mapa)
+
+#Medir distância no mapa
+mapa.add_child(MeasureControl())
+
+#Adiciona posição do mouse
+MousePosition(position="bottomleft", separator=" | ", lat_formatter=formatter, lng_formatter=formatter, prefix="Coordinates:").add_to(mapa)
+
+# Mostrar o mapa
+mapa.save('index.html')
