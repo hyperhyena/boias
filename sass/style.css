@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-size: 16px;
+  font-family: "Montserrat Alternates", sans-serif;
+  color: #000;
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  padding: 20px;
+  background-color: #f2f2f2;
+}
+
+.header {
+  padding: 60px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  font-size: 30px;
+}/*# sourceMappingURL=style.css.map */

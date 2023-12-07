@@ -3,240 +3,30 @@
 <head>
     
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Projeto Boias Livres</title>
     
-        <script>
-            L_NO_TOUCH = false;
-            L_DISABLE_3D = false;
-        </script>
-    
-    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
-    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
-    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
-    
-            <meta name="viewport" content="width=device-width,
-                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-            <style>
-                #map_11de3309ea6e9845fedfcedaacb0fb1f {
-                    position: relative;
-                    width: 100.0%;
-                    height: 100.0%;
-                    left: 0.0%;
-                    top: 0.0%;
-                }
-                .leaflet-container { font-size: 1rem; }
-            </style>
-        
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.css"/>
-    
-                <style>
-                    #float_image_03a6753e26f620c31a1c658a488a1d26 {
-                        position: absolute;
-                        bottom: 75%;
-                        left: 3%;
-                          top: 4;
-                        }
-                </style>
-            
-    <script src="https://unpkg.com/leaflet.boatmarker/leaflet.boatmarker.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-locatecontrol/0.66.2/L.Control.Locate.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-locatecontrol/0.66.2/L.Control.Locate.min.css"/>
-    <script src="https://cdn.jsdelivr.net/gh/ljagis/leaflet-measure@2.1.7/dist/leaflet-measure.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ljagis/leaflet-measure@2.1.7/dist/leaflet-measure.min.css"/>
-    <script src="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/dist/css/style.min.css"/>
 </head>
 <body>
-    
-    
-            <div class="folium-map" id="map_11de3309ea6e9845fedfcedaacb0fb1f" ></div>
-        
-    
-            <img id="float_image_03a6753e26f620c31a1c658a488a1d26" alt="float_image"
-                 src="https://raw.githubusercontent.com/ocefpaf/secoora_assets_map/a250729bbcf2ddd12f46912d36c33f7539131bec/secoora_icons/rose.png"
-                 style="z-index: 999999">
-            </img>
+    <header id="header"> 
+        <h1 style="text-align:center;">Projeto Boias Livres</h1>
+        <h2 style="text-align:center;"> Universidade Federal de Santa Catarina</h2>
+    </header>
             
 </body>
+
 <script>
-    
-    
-            var map_11de3309ea6e9845fedfcedaacb0fb1f = L.map(
-                "map_11de3309ea6e9845fedfcedaacb0fb1f",
-                {
-                    center: [-27.5973002, -48.5496098],
-                    crs: L.CRS.EPSG3857,
-                    zoom: 12,
-                    zoomControl: true,
-                    preferCanvas: false,
-                }
-            );
+    var iframe = window.getElementsByTagName("iframe")[0];
+    alert("Frame title: " + iframe.contentWindow.title);
+  </script>
 
-            
+    <iframe src="mapaFlorianopolis.html" width="100%" height="700" frameborder="6" marginheight="0" marginwidth="0">
+    </iframe>   
 
-        
-    
-            var tile_layer_516ad39e6225c8f89585f55acd7f4c34 = L.tileLayer(
-                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
-                {"attribution": "Tiles \u0026copy; Esri \u0026mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            );
-        
-    
-            tile_layer_516ad39e6225c8f89585f55acd7f4c34.addTo(map_11de3309ea6e9845fedfcedaacb0fb1f);
-        
-    
-            var feature_group_a6f2198cce327c658c49f7a567c39070 = L.featureGroup(
-                {}
-            );
-        
-    
-            feature_group_a6f2198cce327c658c49f7a567c39070.addTo(map_11de3309ea6e9845fedfcedaacb0fb1f);
-        
-    
-            var marker_4bd61895dd7f833ae4fbbde060189350 = L.marker(
-                [-27.505332, -48.344493],
-                {}
-            ).addTo(map_11de3309ea6e9845fedfcedaacb0fb1f);
-        
-    
-            var icon_0aaa150f1d99cd8848efa7680465e946 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
-            );
-            marker_4bd61895dd7f833ae4fbbde060189350.setIcon(icon_0aaa150f1d99cd8848efa7680465e946);
-        
-    
-            marker_4bd61895dd7f833ae4fbbde060189350.bindTooltip(
-                `<div>
-                     Boia
-                 </div>`,
-                {"sticky": true}
-            );
-        
-    
-            var feature_group_7ba781a011df942498e463e915da5505 = L.featureGroup(
-                {}
-            );
-        
-    
-            feature_group_7ba781a011df942498e463e915da5505.addTo(map_11de3309ea6e9845fedfcedaacb0fb1f);
-        
-    
-            var marker_c2dbaf6b2838afb551e39da43530cbcf = L.marker(
-                [-27.615129, -48.3964593],
-                {}
-            ).addTo(map_11de3309ea6e9845fedfcedaacb0fb1f);
-        
-    
-            var icon_66c0c4677ec3b403cc2b17a7510552a6 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
-            );
-            marker_c2dbaf6b2838afb551e39da43530cbcf.setIcon(icon_66c0c4677ec3b403cc2b17a7510552a6);
-        
-    
-            marker_c2dbaf6b2838afb551e39da43530cbcf.bindTooltip(
-                `<div>
-                     Boia
-                 </div>`,
-                {"sticky": true}
-            );
-        
-    
-            var poly_line_5d0cdc38d7041693017aef84fc2717bd = L.polyline(
-                [[-27.505332, -48.344493], [-27.512245, -48.326016], [-27.521975, -48.342472], [-27.525047, -48.32948]],
-                {"bubblingMouseEvents": true, "color": "red", "dashArray": "5,10", "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(map_11de3309ea6e9845fedfcedaacb0fb1f);
-        
-    
-            poly_line_5d0cdc38d7041693017aef84fc2717bd.bindTooltip(
-                `<div>
-                     Caminho da Boia Vermelha
-                 </div>`,
-                {"sticky": true}
-            );
-        
-    
-            var poly_line_a9a0766b4baea6bf5c3e9dd43987d202 = L.polyline(
-                [[-27.615129, -48.3964593], [-27.62664, -48.4184], [-27.635592, -48.378848], [-27.653399, -48.399833]],
-                {"bubblingMouseEvents": true, "color": "green", "dashArray": "5,10", "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(map_11de3309ea6e9845fedfcedaacb0fb1f);
-        
-    
-            poly_line_a9a0766b4baea6bf5c3e9dd43987d202.bindTooltip(
-                `<div>
-                     Caminho da Boia Verde
-                 </div>`,
-                {"sticky": true}
-            );
-        
-    
-            var tile_layer_a33c2f1df96ae6b4c5cea829c3aa0ebf = L.tileLayer(
-                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
-                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            );
-            var mini_map_4ae00808c5e568f6d1d333f73eba2a9e = new L.Control.MiniMap(
-                tile_layer_a33c2f1df96ae6b4c5cea829c3aa0ebf,
-                {"autoToggleDisplay": false, "centerFixed": false, "collapsedHeight": 25, "collapsedWidth": 25, "height": 150, "minimized": false, "position": "bottomright", "toggleDisplay": true, "width": 150, "zoomAnimation": false, "zoomLevelOffset": -5}
-            );
-            map_11de3309ea6e9845fedfcedaacb0fb1f.addControl(mini_map_4ae00808c5e568f6d1d333f73eba2a9e);
-        
-    
-            var boat_marker_baa1107ee05c80001b5fc80d82b25b46 = L.boatMarker(
-                [-27.525047, -48.32948],
-                {"color": "#f2f2f2"}
-            ).addTo(map_11de3309ea6e9845fedfcedaacb0fb1f);
-            boat_marker_baa1107ee05c80001b5fc80d82b25b46.setHeadingWind(
-                -20,
-                25,
-                46
-            );
-            
-    
-            var locate_control_9bf30359d4fa5240a370a18f60021cbb = L.control.locate(
-                {"showCompass": true}
-            ).addTo(map_11de3309ea6e9845fedfcedaacb0fb1f);
-            
-                locate_control_9bf30359d4fa5240a370a18f60021cbb.start();
-            
-        
-    
-            var measure_control_db333f1e6d344bedf3f4d7aa0aa3b448 = new L.Control.Measure(
-                {"position": "topright", "primaryAreaUnit": "sqmeters", "primaryLengthUnit": "meters", "secondaryAreaUnit": "acres", "secondaryLengthUnit": "miles"});
-            map_11de3309ea6e9845fedfcedaacb0fb1f.addControl(measure_control_db333f1e6d344bedf3f4d7aa0aa3b448);
 
-            // Workaround for using this plugin with Leaflet>=1.8.0
-            // https://github.com/ljagis/leaflet-measure/issues/171
-            L.Control.Measure.include({
-                _setCaptureMarkerIcon: function () {
-                    // disable autopan
-                    this._captureMarker.options.autoPanOnFocus = false;
-                    // default function
-                    this._captureMarker.setIcon(
-                        L.divIcon({
-                            iconSize: this._map.getSize().multiplyBy(2)
-                        })
-                    );
-                },
-            });
-
-        
-    
-            var mouse_position_4e9a623f0f36982a58ab7dd5ded9892a = new L.Control.MousePosition(
-                {"emptyString": "Unavailable", "lngFirst": false, "numDigits": 5, "position": "bottomleft", "prefix": "Coordinates:", "separator": " | "}
-            );
-            mouse_position_4e9a623f0f36982a58ab7dd5ded9892a.options["latFormatter"] =
-                function(num) {return L.Util.formatNum(num, 3) + ' &deg; ';};;
-            mouse_position_4e9a623f0f36982a58ab7dd5ded9892a.options["lngFormatter"] =
-                function(num) {return L.Util.formatNum(num, 3) + ' &deg; ';};;
-            map_11de3309ea6e9845fedfcedaacb0fb1f.addControl(mouse_position_4e9a623f0f36982a58ab7dd5ded9892a);
-        
-</script>
 </html>
