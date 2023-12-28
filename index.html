@@ -17,16 +17,33 @@
         <h1 style="text-align:center;">Projeto Boias Livres</h1>
         <h2 style="text-align:center;"> Universidade Federal de Santa Catarina</h2>
     </header>
-            
-</body>
+    
+    <div id="location"></div>
+    <script>
+      var div  = document.getElementById("location");
+      function getLocation() {
+        if (navigator.geolocation) {
+          navigator.geolocation.watchPosition(showPosition);
+        } else {
+          div.innerHTML = "The Browser Does not Support Geolocation";
+        }
+      }
 
+      function showPosition(position) {
+        div.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
+      }
+      getLocation();
+    </script>
+
+<div id="mapa" ></div>
 <script>
     var iframe = window.getElementsByTagName("iframe")[0];
     alert("Frame title: " + iframe.contentWindow.title);
   </script>
 
-    <iframe src="mapaFlorianopolis.html" width="100%" height="700" frameborder="6" marginheight="0" marginwidth="0">
-    </iframe>   
+    <iframe src="mapaFlorianopolis.html" width="100%" height="700" marginheight="0" marginwidth="0">
+    </iframe>  
 
+</body>
 
 </html>
