@@ -24,15 +24,16 @@ grupoVerde = folium.FeatureGroup("Boia Verde").add_to(mapa)
 grupoPreto = folium.FeatureGroup("Boia Preta").add_to(mapa)
 grupoLaranja = folium.FeatureGroup("Boia Laranja").add_to(mapa)
 
-def trilhaDaBoia(coordenadas, nomeDaBoia, corDaBoia, grupoBoia):
-    folium.PolyLine(coordenadas, tooltip=nomeDaBoia, dash_array="5,10", color=corDaBoia, smooth_factor=30).add_to(mapa)
+def trilhaDaBoia(coordenadas,  corDaBoia, grupoBoia):
+    folium.PolyLine(coordenadas, dash_array="5,10", color=corDaBoia, smooth_factor=30).add_to(mapa)
     for coordenada in coordenadas[1:]:
-        marcadorDeBoia(coordenada, nomeDaBoia, corDaBoia, circle, grupoBoia)
+        marcadorDeBoia(coordenada, corDaBoia, circle, grupoBoia)
 
-def marcadorDeBoia(coordenadaDaBoia, nomeDaBoia, corDaBoia, icone, grupoBoia):
-    folium.Marker(coordenadaDaBoia, tooltip=nomeDaBoia, icon=folium.Icon(color=corDaBoia, icon=icone)).add_to(grupoBoia)
+def marcadorDeBoia(coordenadaDaBoia, corDaBoia, icone, grupoBoia):
+    folium.Marker(coordenadaDaBoia, popup=folium.Popup(str(coordenadaDaBoia), max_width=100), icon=folium.Icon(color=corDaBoia, icon=icone, popup=coordenadaDaBoia)).add_to(grupoBoia)
+    print(str(coordenadaDaBoia))
 
-    
+
 def criaListaDeCoordenadas(caminhoArquivo):
     coordenadasLidas = []
     with open(caminhoArquivo) as arquivo:
