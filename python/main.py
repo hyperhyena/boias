@@ -44,15 +44,19 @@ def criaListaDeCoordenadas(caminhoArquivo):
                 coordenadasLidas.append(tuple(lat_long))
     return coordenadasLidas
 
-marcadorDeBoia([-27.28, -48.57], bvd, verde, flag, grupoVerde)
-marcadorDeBoia([-27.280, -48.434], bv, laranja, flag, grupoLaranja)
-marcadorDeBoia([-27.208, -48.533], bp, preto, flag, grupoPreto)
+def plotarBoia(listaCoordenadasBoia, corDaBoia, grupoBoia):
+    marcadorDeBoia(listaCoordenadasBoia[0],corDaBoia, flag, grupoBoia)
+    trilhaDaBoia(listaCoordenadasBoia, corDaBoia, grupoBoia)
 
-marcadorDeBoia([-27.6017447,-48.5176886], br, roxo, flag, grupoPreto) #marcador na UFSC
+marcadorDeBoia([-27.28, -48.57], verde, flag, grupoVerde)
+marcadorDeBoia([-27.280, -48.434], laranja, flag, grupoLaranja)
+marcadorDeBoia([-27.208, -48.533], preto, flag, grupoPreto)
+
+marcadorDeBoia([-27.6017447,-48.5176886], roxo, flag, grupoPreto) #marcador na UFSC
 
 listaCoordenadasBoia = criaListaDeCoordenadas(caminhoArquivoLaranja)
-marcadorDeBoia(listaCoordenadasBoia[0], bl, vermelho, flag, grupoVermelho)
-trilhaDaBoia(listaCoordenadasBoia, bl, vermelho, grupoVermelho)
+plotarBoia(listaCoordenadasBoia, vermelho, grupoVermelho)
+
 
 
 folium.FitOverlays(fly=True).add_to(mapa) #centrar nos marcadores 

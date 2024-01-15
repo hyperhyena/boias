@@ -133,7 +133,7 @@ body {
 }
 
 .custom_nav2 .navbar-expand-lg .navbar-nav .nav-item.active .nav-link, .custom_nav2 .navbar-expand-lg .navbar-nav .nav-item:hover .nav-link {
-  color: #ffffff;
+  color: #d5eaeb;
 }
 
 .custom_nav2 #navbarSupportedContent {
@@ -161,7 +161,7 @@ a:focus {
 }
 
 .custom_nav-container .nav_search-btn {
-  background-image: url(../images/search-icon-black.png);
+  background-image: url(../images/search-icon.png);
   background-size: 18px;
   background-repeat: no-repeat;
   width: 35px;
@@ -397,9 +397,15 @@ a:focus {
   color: #151615;
 }
 
+
 .service_section .tamanho_mapa {
-  width: 1200px;
-  height: 700px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
   
 }
 
@@ -779,7 +785,7 @@ a:focus {
 }
 
 .info_section .info_link-box a:hover {
-  color: #ffffff;
+  color: #aa2222;
 }
 
 .info_section .info_link-box a img {
