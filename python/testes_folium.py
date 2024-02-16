@@ -62,7 +62,9 @@ marcadorDeBoia([-27.208, -48.533], preto, flag, grupoPreto)
 
 marcadorDeBoia([-27.6017447,-48.5176886], roxo, flag, grupoPreto) #marcador na UFSC
 
-folium.Marker([-27.6891183,-48.5244573], popup=folium.Popup(str([-27.6891183,-48.5244573]), max_width=100), icon=folium.Icon(color='white', icon=flag, popup=[-27.6891183,-48.5244573])).add_to(mapa)
+marcadorDeBoia([-27.6964055,-48.5487495], 'gray', flag, grupoPreto)
+
+#folium.Marker([-27.6891183,-48.5244573], popup=folium.Popup(str([-27.6891183,-48.5244573]), max_width=100), icon=folium.Icon(color='white', icon=flag, popup=[-27.6891183,-48.5244573])).add_to(mapa)
 #coordenadasDaTrilha = [(-27.414, -48.518), (-27.414, -48.517), (-27.413, -48.517), (-27.412, -48.517), (-27.412, -48.516), (-27.411, -48.516)]
 #print(coordenadasDaTrilha)
 #marcadorDeBoia(coordenadasDaTrilha[0], 'Boia Vermelha', 'red', grupoVermelho)

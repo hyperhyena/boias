@@ -40,25 +40,25 @@
           <a class="navbar-brand" href="index.html">
             <img src="images/logo.png" alt="" />
             <span>
-              Projeto Boias Livres
+              Boias Livres
             </span>
           </a>
           <div class="contact_nav" id="">
             <ul class="navbar-nav ">
               <li class="nav-item">
-                <a class="nav-link" href="service.html">
+                <a class="nav-link" href="https://maps.app.goo.gl/mpFTDzKitajnt1fz9" target="_blank" rel="noopener noreferrer" >
                   <img src="images/location.png" alt="" />
                   <span>Lab ECO - EMC - UFSC</span>
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="service.html">
+                <a class="nav-link" href="">
                   <img src="images/call.png" alt="" />
-                  <span>Contato : </span>
+                  <span>Contato : + 55 48 9</span>
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="http://www.veleiro.eco.br/pt/">
+                <a class="nav-link" href="http://www.veleiro.eco.br/pt/" target="_blank" rel="noopener noreferrer">
                   <img src="images/envelope.png" alt="" />
                   <span>Visite o site do Veleiro ECO</span>
                 </a>
@@ -87,20 +87,17 @@
                     <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="about.html">About </a>
+                    <a class="nav-link" href="about.html">Sobre </a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="boias.html">Boias </a>
                   </li>
                   <li class="nav-item active">
-                    <a class="nav-link" href="contact.html">Contact Us</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Login</a>
+                    <a class="nav-link" href="contact.html">Entre em Contato</a>
                   </li>
                 </ul>
-                <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
-                  <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
+              <!--  <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
+                  <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button> -->
                 </form>
               </div>
             </div>
@@ -117,31 +114,31 @@
       <div class="heading_container">
         <h2>
           <span>
-            Get In Touch
+            Entre em contato
           </span>
         </h2>
       </div>
       <div class="layout_padding2-top">
         <div class="row">
           <div class="col-md-6 ">
-            <form action="">
+            <form action="https://api.web3forms.com/submit" method="POST">
               <div class="contact_form-container">
                 <div>
-                  <div>
-                    <input type="text" placeholder="Name" />
-                  </div>
-                  <div>
-                    <input type="email" placeholder="Email" />
-                  </div>
-                  <div>
-                    <input type="text" placeholder="Phone Number" />
-                  </div>
+                  <input type="hidden" name="access_key" value="421a100c-c662-4751-92e3-42b072e3942e">
+                  <!-- <input type="hidden" name="redirect" value="link do site https"> FAZER PAGINA PRA REDIRECIONAR-->
+                    <input type="text" name="nome" placeholder="Nome" />
+                    <input type="email" name="email" placeholder="Email" />
+                    <input type="text" name="celular" placeholder="Celular" />
+                    <input type="text" name="subject" placeholder="Assunto" />
+                    <input type="hidden" name="from_name" value="Site Boias Livres">
                   <div class="mt-5">
-                    <input type="text" placeholder="Message" />
+                    <input type="text" name="mensagem" placeholder="Mensagem" />
                   </div>
+                  
+                  <!--<div class="h-captcha" data-captcha="true"></div>-->
                   <div class="mt-5">
                     <button type="submit">
-                      Send
+                      Enviar
                     </button>
                   </div>
                 </div>
@@ -152,7 +149,7 @@
             <div class="map_container">
               <div class="map-responsive">
                 <iframe
-                  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=Eiffel+Tower+Paris+France"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d220.98369821734826!2d-48.51801210957093!3d-27.601615006942744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95273900f57ede01%3A0xa7841adbe71af281!2sDepartamento%20de%20Engenharia%20Mec%C3%A2nica%20-%20Bloco%20A!5e0!3m2!1spt-BR!2sbr!4v1706736010972!5m2!1spt-BR!2sbr"
                   width="600" height="300" frameborder="0" style="border:0; width: 100%; height:100%"
                   allowfullscreen></iframe>
               </div>
@@ -168,7 +165,7 @@
   <!-- info section -->
 
   <section class="info_section layout_padding2-top">
-    <div class="container">
+    <!-- <div class="container">
       <div class="info_form">
         <h4>
           Our Newsletter
@@ -180,18 +177,18 @@
               subscribe
             </button>
           </div>
-        </form>
+        </form>-->
       </div>
     </div>
     <div class="container">
       <div class="row">
         <div class="col-md-3">
           <h6>
-            About Energym
+            Sobre o Projeto Boias Livres
           </h6>
           <p>
-            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-            minim veniam, quis nostrud exercitation u
+            O Projeto Boias Livres é promovido pelo Laboratório ECO, o Laboratório de Engenharia e Ciências Oceânicas
+            da Universidade Federal de Santa Catarina.
           </p>
         </div>
         <div class="col-md-2 offset-md-1">
@@ -203,16 +200,13 @@
               <a class="" href="index.html">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="">
-              <a class="" href="about.html">About </a>
+              <a class="" href="about.html">Sobre </a>
             </li>
             <li class="">
-              <a class="" href="service.html">Services </a>
+              <a class="" href="boias.html">Boias </a>
             </li>
             <li class="">
-              <a class="" href="#contactSection">Contact Us</a>
-            </li>
-            <li class="">
-              <a class="" href="#">Login</a>
+              <a class="" href="#contactSection">Entre em Contato</a>
             </li>
           </ul>
         </div>
@@ -308,6 +302,9 @@
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>
 
+  <script src="https://web3forms.com/client/script.js" async defer></script>
+
+  </script>
   <script>
     function openNav() {
       document.getElementById("myNav").classList.toggle("menu_width");

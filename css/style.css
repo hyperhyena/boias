@@ -252,6 +252,12 @@ a:focus {
   color: #054e6d;
 }
 
+@media only screen and (max-width: 640px) {
+  .slider_section .detail-box p {
+    color:#fcfcfc !important;
+  }
+}
+
 .slider_section .detail-box .btn-box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -260,12 +266,14 @@ a:focus {
       flex-wrap: wrap;
   margin-top: 35px;
   margin: 35px -5px 0 -5px;
+  
 }
 
 .slider_section .detail-box .btn-box a {
   width: 165px;
   text-align: center;
   margin: 5px;
+  border-radius: 8px;
 }
 
 .slider_section .detail-box .btn-box .btn-1 {
@@ -281,6 +289,47 @@ a:focus {
 .slider_section .detail-box .btn-box .btn-1:hover {
   background-color: transparent;
   color: #0f9dcc;
+}
+
+.buttonHover {
+  width: 165px;
+  text-align: center;
+  border-radius: 8px;
+  margin: 5px;
+  display: inline-block;
+  background-color: #0f9dcc;
+  color: #FFFFFF;
+  line-height: 50px;
+  padding: 7px 0;
+  transition: all 0.5s;
+  cursor: pointer;
+  
+}
+
+.buttonHover span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.buttonHover span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.buttonHover:hover span {
+  padding-right: 25px;
+  color: #FFFFFF;
+}
+
+.buttonHover:hover span:after {
+  opacity: 1;
+  right: 0;
 }
 
 .slider_section .detail-box .btn-box .btn-2 {
@@ -390,6 +439,7 @@ a:focus {
   border: 1px solid #151615;
   color: #ffffff;
   margin-top: 15px;
+  border-radius: 8px;
 }
 
 .about_section .box .detail-box a:hover {
@@ -660,6 +710,7 @@ a:focus {
   padding: 14px 55px;
   font-size: 14px;
   text-transform: uppercase;
+  border-radius: 8px;
 }
 
 .map_container {
